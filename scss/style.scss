@@ -1,0 +1,239 @@
+$color-black: #000000;
+$color-white: #ffffff;
+$color-blue: #336699;
+$color-light-gray: #e6e6e6;
+$color-gray: #999999;
+$color-orange: #ff6600;
+$color-light-green: #33cc33;
+html {
+    height: 100%;
+}
+body {
+    display: grid;
+    grid-template-rows: 1fr 85px;
+    min-height: 100vh;
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    input,
+    textarea,
+    button,
+    select,
+    label,
+    a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+}
+
+.container {
+    max-width: 1045px;
+    padding: 0 40px;
+    width: 100%;
+    margin: 0 auto;
+}
+.body-inner {
+    min-height: 100vh;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    min-width: 100px;
+    min-height: 33px;
+    border-radius: 7px;
+    color: $color-white;
+    background-color: $color-blue;
+    font-weight: 900;
+    line-height: 33px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+.main {
+    margin-top: 43px;
+    &__title {
+        margin-bottom: 13px;
+        line-height: 30px;
+        font-size: 25px;
+        color: $color-blue;
+    }
+    &__profile-navigation {
+        margin: 0 -5px 20px;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 20px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            padding: 8px 19px;
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 1.2;
+            color: $color-blue;
+            border: 3px solid $color-blue;
+            border-radius: 12px;
+        }
+        a.current {
+            background-color: $color-blue;
+            color: $color-white;
+        }
+    }
+    &__list {
+        margin-bottom: 20px;
+        .item {
+            margin-bottom: 10px;
+            border: 3px solid $color-blue;
+            border-radius: 12px;
+            img {
+                border-radius: 12px;
+            }
+        }
+    }
+    .button {
+        padding: 0 16px;
+        min-height: 48px;
+        line-height: 48px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+.breadcrumbs {
+    padding: 5px 0;
+    margin: 7px 0;
+    ul {
+        display: flex;
+        li {
+            margin-right: 14px;
+            position: relative;
+            text-decoration: underline;
+            line-height: 13px;
+            font-size: 12px;
+            color: $color-gray;
+            &::after {
+                position: absolute;
+                right: -11px;
+                content: "/";
+            }
+            a {
+                color: inherit;
+            }
+        }
+        li:last-child {
+            margin-right: 0;
+            text-decoration: none;
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
+.item-page-navigation {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    ul {
+        display: flex;
+        column-gap: 11px;
+        a {
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .current {
+            font-weight: 900;
+        }
+    }
+}
+.items {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .main__list {
+        flex: 1 1 auto;
+    }
+}
+.tool-type {
+    margin-bottom: 30px;
+    ul {
+        display: flex;
+        column-gap: 15px;
+    }
+    .button {
+        padding: 0 10px;
+        min-width: unset;
+        font-size: 16px;
+        line-height: 24px;
+        min-height: 24px;
+        border-radius: 4px;
+        background-color: $color-white;
+        border: 2px solid $color-blue;
+        color: $color-blue;
+    }
+    .current {
+        background-color: $color-blue;
+        border-color: $color-blue;
+        color: $color-white;
+    }
+}
+.message {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    font-size: 22px;
+    &--success {
+        align-items: start;
+    }
+    &__title {
+        align-self: center;
+        margin-bottom: 20px;
+        color: $color-blue;
+        font-weight: 900;
+        font-size: 72px;
+    }
+    &__text {
+        margin-bottom: 30px;
+        line-height: 1.25;
+        span {
+            color: $color-orange;
+            font-weight: 500;
+        }
+    }
+    &__action {
+        margin-bottom: 30px;
+    }
+    b {
+        font-weight: 500;
+    }
+    a {
+        position: relative;
+        color: $color-blue;
+        font-weight: 500;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $color-blue;
+        }
+    }
+    .button--liqpay {
+        align-self: center;
+        background-color: $color-light-green;
+        color: $color-white;
+        border-radius: 12px;
+        &::after {
+            content: none;
+        }
+    }
+}
+@import "header";
+@import "footer";
+@import "item";
+@import "main-page";
+@import "add";
+@import "profile";

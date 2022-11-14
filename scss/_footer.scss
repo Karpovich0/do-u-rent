@@ -1,0 +1,51 @@
+.footer {
+    background-color: $color-blue;
+    min-height: 85px;
+    display: grid;
+    grid-template-rows: 1fr 27px;
+    .container {
+    }
+    div {
+        display: flex;
+        align-items: center;
+        column-gap: 95px;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+
+        .button {
+            border: 1px solid $color-white;
+            padding: 0 13px;
+            min-width: unset;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .telegram {
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+    .politics {
+        position: relative;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-gray;
+        background-color: $color-black;
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     bottom: -1px;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 1px;
+        //     background-color: $color-gray;
+        // }
+    }
+}

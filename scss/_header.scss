@@ -1,0 +1,84 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid $color-black;
+    width: 100%;
+    background-color: $color-white;
+    .container {
+        min-height: 43px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        margin-right: 10px;
+    }
+    .drop-menu {
+        button {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            &::before {
+                margin-right: 5px;
+                content: "";
+                width: 5px;
+                height: 5px;
+                background-color: $color-blue;
+                border-radius: 50%;
+            }
+            &::after {
+                display: block;
+                margin-left: 5px;
+                content: "";
+                width: 14px;
+                height: 14px;
+                background: url("../src/icons/arrow.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: 0 0;
+                transform: rotate(90deg);
+            }
+        }
+        ul {
+            display: none;
+        }
+    }
+    form {
+        width: 100%;
+        max-width: 334px;
+        border-radius: 7px;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        input {
+            padding: 5px 10px;
+            border-radius: 7px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border: 3px solid $color-blue;
+            &::placeholder {
+                color: $color-gray;
+            }
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            img {
+                margin-left: 7px;
+            }
+        }
+    }
+    nav {
+        display: flex;
+        column-gap: 15px;
+        .add {
+            span {
+                margin-right: 5px;
+            }
+        }
+    }
+}

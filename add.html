@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Do you rent</title>
+		<!-- fonts -->
+		<link rel="stylesheet" href="./fonts/museo-sans-cyrl.css" />
+		<!-- styles -->
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/drop-default-styles.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<a href="index.html" class="logo"><img src="./src/icons/dourent.svg" width="140" alt="" /></a>
+				<div class="drop-menu">
+					<button type="button">Київ</button>
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+				<div class="drop-menu">
+					<button type="button">Електроінструмент</button>
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+				<form action="">
+					<input type="text" placeholder="Що шукаєте?" />
+					<button type="submit" class="button">
+						Знайти <img src="/src/icons/poshuk-bily.svg" width="25" height="25" alt="" />
+					</button>
+				</form>
+				<nav>
+					<a href="" class="bookmarks"><img src="./src/icons/zirka.svg" alt="" width="30" /></a>
+					<a href="" class="bookmarks"><img src="./src/icons/profil.svg" alt="" width="25" /></a>
+					<a href="" class="add button"><span>+</span> Додати</a>
+				</nav>
+			</div>
+		</header>
+		<main class="main">
+			<section class="container add">
+				<nav class="breadcrumbs">
+					<ul>
+						<li>
+							<a href="/index.html">DoURent</a>
+						</li>
+						<li>Додати оголошення</li>
+					</ul>
+				</nav>
+				<h1 class="main__title">Додати оголошення</h1>
+				<form action="" class="add__form">
+					<input
+						type="text"
+						class="add__title"
+						required
+						name="title"
+						placeholder="Назва оголошення (до 60 символів)*"
+					/>
+					<div class="add__category">
+						<input type="text" class="add__category" required name="category" placeholder="Категорія*" />
+						<div>
+							<button type="button">+ Додати категорію</button>
+						</div>
+					</div>
+					<textarea
+						name="description"
+						id=""
+						cols="30"
+						rows="7"
+						placeholder="Опис пропозиції (до 1 000 символів). Хочете результат - опишіть Вашу пропозицію якомога гарніше, перелічіть переваги. Це працює!"
+					></textarea>
+					<div class="add__file">
+						<p>Гарне фото - майже гарантія швидкого результату!</p>
+						<ul>
+							<li>
+								<label class="add__file-label" for="file1">
+									<span>+</span>
+									ФОТО
+								</label>
+								<input class="visually-hidden" id="file1" name="file1" type="file" />
+							</li>
+							<li>
+								<label class="add__file-label" for="file2"><span>+</span> ФОТО</label>
+								<input class="visually-hidden" id="file2" name="file2" type="file" />
+							</li>
+							<li>
+								<label class="add__file-label" for="file3"><span>+</span> ФОТО</label>
+								<input class="visually-hidden" id="file3" name="file3" type="file" />
+							</li>
+							<li>
+								<label class="add__file-label" for="file4"><span>+</span> ФОТО</label>
+								<input class="visually-hidden" id="file4" name="file4" type="file" />
+							</li>
+						</ul>
+					</div>
+					<ul class="add__rate">
+						<li>
+							<input type="radio" id="name1" name="rate" class="visually-hidden" />
+							<label for="name1"><span>Ціна, грн.</span>за годину</label>
+						</li>
+						<li>
+							<input type="radio" id="name2" name="rate" class="visually-hidden" checked />
+							<label for="name2"><span>Ціна, грн.</span>за добу</label>
+						</li>
+						<li>
+							<input type="radio" id="name3" name="rate" class="visually-hidden" />
+							<label for="name3"><span>Ціна, грн.</span>за місяць</label>
+						</li>
+					</ul>
+					<div class="add__address">
+						<input class="add__address-input" type="text" name="city" placeholder="Місто*" />
+						<input class="add__address-input" type="text" name="street" placeholder="Вулиця або адреса" />
+					</div>
+					<div class="add__data">
+						<input type="tel" name="telephone" placeholder="Номер телефону*" />
+						<input type="password" name="password" placeholder="Пароль" />
+					</div>
+					<div class="add__time">
+						<p>Коли можна Вам дзвонити?</p>
+						<input type="time" class="time-1" value="08:00" />
+						<span>&ndash;</span>
+						<input type="time" class="time-2" value="20:00" />
+					</div>
+					<button class="add__place" type="submit">Розмістити!</button>
+				</form>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div>
+					<a href="index.html" class="logo"><img src="./src/icons/dourent-white.svg" width="140" alt="" /></a>
+					<ul>
+						<li>
+							<a href="" class="button">Орендарям</a>
+						</li>
+						<li>
+							<a href="" class="button">Орендодавцям</a>
+						</li>
+						<li>
+							<a href="" class="button">Компаніям</a>
+						</li>
+						<li>
+							<a href="" class="button">Ціни</a>
+						</li>
+						<li>
+							<a href="" class="button telegram">
+								<img src="./src/icons/telegram.svg" alt="" width="25" height="25" />
+								Телеграм бот
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<a href="" class="politics">Політика конфеденційності</a>
+		</footer>
+	</body>
+</html>
