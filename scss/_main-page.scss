@@ -9,6 +9,19 @@
         font-size: 75px;
         font-weight: 900;
         color: $color-blue;
+        @media (max-width: $width-tablet-large) {
+            margin-top: 25px;
+            margin-bottom: 20px;
+            font-size: 50px;
+        }
+        @media (max-width: $width-tablet) {
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-size: 40px;
+        }
+        @media (max-width: $width-mobile) {
+            font-size: 34px;
+        }
         span {
             font-weight: 300;
             color: $color-orange;
@@ -22,20 +35,42 @@
         width: 100%;
         font-size: 30px;
         font-weight: 700;
+        gap: 12px;
+        @media (max-width: $width-tablet-large) {
+            margin-bottom: 35px;
+            font-size: 22px;
+        }
+        @media (max-width: $width-tablet) {
+            flex-direction: column;
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+        @media (max-width: $width-mobile) {
+            text-align: center;
+        }
+        @media (max-width: $width-mobile) {
+            margin-bottom: 25px;
+        }
         a {
             display: flex;
             align-items: center;
-            margin-left: 12px;
             padding: 5px 9px;
             border-radius: 20px;
             border: 3px solid $color-blue;
             font-weight: 900;
             color: $color-blue;
+            @media (max-width: $width-tablet) {
+                border-width: 2px;
+            }
             svg {
                 margin-right: 5px;
                 width: 40px;
                 height: 40px;
                 fill: $color-blue;
+                @media (max-width: $width-tablet-large) {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
     }
@@ -45,11 +80,30 @@
         column-gap: 100px;
         font-size: 40px;
         font-weight: 700;
+        @media (max-width: $width-tablet-large) {
+            margin-bottom: 45px;
+            font-size: 30px;
+            column-gap: 50px;
+        }
+        @media (max-width: $width-tablet) {
+            margin-bottom: 35px;
+            font-size: 26px;
+            column-gap: 30px;
+        }
+        @media (max-width: $width-mobile) {
+            gap: 10px;
+            flex-direction: column;
+        }
         a {
             display: block;
             padding: 20px 38px;
             border-radius: 24px;
             color: $color-white;
+            @media (max-width: $width-tablet) {
+                padding: 15px 30px;
+                border-radius: 20px;
+                text-align: center;
+            }
         }
         a:first-child {
             background-color: $color-orange;
@@ -61,9 +115,25 @@
     .text {
         margin-bottom: 75px;
         padding: 0 35px;
+        @media (max-width: $width-tablet-large) {
+            padding: 0 20px;
+            margin-bottom: 45px;
+        }
+        @media (max-width: $width-mobile) {
+            margin-bottom: 30px;
+            padding: 0;
+        }
         p {
             margin-bottom: 36px;
             font-size: 24px;
+            @media (max-width: $width-tablet-large) {
+                margin-bottom: 24px;
+                font-size: 20px;
+            }
+            @media (max-width: $width-tablet) {
+                margin-bottom: 22px;
+                font-size: 18px;
+            }
             &:last-child {
                 margin-bottom: 0;
             }

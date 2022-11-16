@@ -5,12 +5,15 @@ $color-light-gray: #e6e6e6;
 $color-gray: #999999;
 $color-orange: #ff6600;
 $color-light-green: #33cc33;
+$width-tablet-large: 1199px;
+$width-tablet: 767px;
+$width-mobile: 575px;
 html {
     height: 100%;
 }
 body {
     display: grid;
-    grid-template-rows: 1fr 85px;
+    grid-template-rows: 1fr max-content;
     min-height: 100vh;
     font-family: "Museo Sans Cyrl", sans-serif;
     font-style: normal;
@@ -30,6 +33,9 @@ body {
     padding: 0 40px;
     width: 100%;
     margin: 0 auto;
+    @media (max-width: $width-tablet) {
+        padding: 0 20px;
+    }
 }
 .body-inner {
     min-height: 100vh;
@@ -48,6 +54,11 @@ body {
     font-size: 18px;
     border: none;
     cursor: pointer;
+    @media (max-width: $width-mobile) {
+        min-width: unset;
+        font-size: 16px;
+        padding: 0 8px;
+    }
 }
 .main {
     margin-top: 43px;

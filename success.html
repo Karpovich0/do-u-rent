@@ -16,20 +16,89 @@
 		<header class="header">
 			<div class="container">
 				<a href="index.html" class="logo"><img src="./src/icons/dourent.svg" width="140" alt="" /></a>
-				<div class="drop-menu">
-					<button type="button">Київ</button>
-					<ul>
-						<li></li>
-					</ul>
+				<div class="drop-menu drop-menu--region">
+					<button class="toggle1" type="button">Київ</button>
+					<div class="drop-menu__container">
+						<div class="drop-menu__header">
+							<label for="region-name"
+								>Знайдіть ваш населений пункт через пошук, або оберіть із списку</label
+							>
+							<p class="header__input-wrapper">
+								<input
+									class="header__input"
+									id="region-name"
+									name="region-name"
+									type="text"
+									placeholder="Почніть вводити назву"
+								/>
+							</p>
+						</div>
+						<p class="drop-menu__country"><a href="">Вся Україна</a></p>
+						<ul>
+							<li><a href="">АР Крим</a></li>
+							<li><a href="">Волинська обл.</a></li>
+							<li><a href="">Вінницька обл.</a></li>
+							<li><a href="">Дніпропетровська обл.</a></li>
+							<li><a href="">Донецька обл.</a></li>
+							<li><a href="">Житомирська обл.</a></li>
+							<li><a href="">Запорізька обл.</a></li>
+							<li><a href="">Закарпатська обл.</a></li>
+							<li><a href="">Київська обл.</a></li>
+							<li><a href="">Кіровоградська обл.</a></li>
+							<li><a href="">Луганська обл.</a></li>
+							<li><a href="">Львівська обл.</a></li>
+							<li><a href="">Миколаєвська обл.</a></li>
+							<li><a href="">Одеська обл.</a></li>
+							<li><a href="">Полтавська обл.</a></li>
+							<li><a href="">Рівненська обл.</a></li>
+							<li><a href="">Сумська обл.</a></li>
+							<li><a href="">Тернопільська обл.</a></li>
+							<li><a href="">Харківська обл.</a></li>
+							<li><a href="">Херсонська обл.</a></li>
+							<li><a href="">Хмельницька обл.</a></li>
+							<li><a href="">Черкаська обл.</a></li>
+							<li><a href="">Чернівецька обл.</a></li>
+							<li><a href="">Чернігівська обл.</a></li>
+							<li><a href="">Івано-Франківська обл.</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="drop-menu">
-					<button type="button">Електроінструмент</button>
-					<ul>
-						<li></li>
-					</ul>
+				<div class="drop-menu drop-menu--tools">
+					<button class="toggle2" type="button">Електроінструмент</button>
+					<div class="drop-menu__container">
+						<p class="drop-menu__header drop-menu__country"><a href="">Дивитися всі оголошення</a></p>
+						<ul class="drop-menu__list drop-menu__list--tools">
+							<li>
+								<a href=""><img width="45" src="./src/icons/nedvijimost.svg" alt="" />Нерухомість</a>
+							</li>
+							<li>
+								<a href=""><img width="45" src="./src/icons/uslugi.svg" alt="" />Обладнання</a>
+							</li>
+							<li>
+								<a href=""><img width="45" src="./src/icons/moda.svg" alt="" />Одяг</a>
+							</li>
+							<li>
+								<a href=""><img width="45" src="./src/icons/nedvijimost.svg" alt="" />Інше</a>
+							</li>
+							<li>
+								<a href=""><img width="45" src="./src/icons/avto.svg" alt="" />Транспорт</a>
+							</li>
+							<li>
+								<a href=""><img width="45" src="./src/icons/sport.svg" alt="" />Спорт і відпочинок</a>
+							</li>
+							<li>
+								<a href=""><img width="45" src="./src/icons/deti.svg" alt="" />Дитячий світ</a>
+							</li>
+						</ul>
+						<p class="drop-menu__add">
+							<a href=""
+								><b>+</b><span>Що додати? Напишіть і ми додамо категорію, яку Ви бажаєте!</span></a
+							>
+						</p>
+					</div>
 				</div>
 				<form action="">
-					<input type="text" placeholder="Що шукаєте?" />
+					<input class="header__input" type="text" placeholder="Що шукаєте?" />
 					<button type="submit" class="button">
 						Знайти <img src="/src/icons/poshuk-bily.svg" width="25" height="25" alt="" />
 					</button>
@@ -37,7 +106,7 @@
 				<nav>
 					<a href="" class="bookmarks"><img src="./src/icons/zirka.svg" alt="" width="30" /></a>
 					<a href="" class="bookmarks"><img src="./src/icons/profil.svg" alt="" width="25" /></a>
-					<a href="" class="add button"><span>+</span> Додати</a>
+					<a href="./add.html" class="add button"><span>+</span> Додати</a>
 				</nav>
 			</div>
 		</header>
@@ -109,5 +178,7 @@
 			</div>
 			<a href="" class="politics">Політика конфеденційності</a>
 		</footer>
+		<script src="./js/jquery-3.6.1.min.js"></script>
+		<script src="./js/close-drop-menu.js"></script>
 	</body>
 </html>
