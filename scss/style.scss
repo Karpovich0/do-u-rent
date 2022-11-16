@@ -12,6 +12,7 @@ html {
     height: 100%;
 }
 body {
+    overflow: hidden;
     display: grid;
     grid-template-rows: 1fr max-content;
     min-height: 100vh;
@@ -309,6 +310,46 @@ body {
         &::after {
             content: none;
         }
+    }
+}
+.filter {
+    background-color: $color-light-gray;
+    .container {
+        padding: 5px 45px 4px;
+
+        height: 40px;
+        display: flex;
+        column-gap: 10px;
+        justify-content: space-between;
+
+        @media (max-width: $width-tablet-large) {
+            justify-content: end;
+        }
+        @media (max-width: $width-tablet) {
+            padding: 5px 20px 4px;
+        }
+    }
+    button {
+        display: block;
+        color: $color-blue;
+        padding: 5px 8px;
+        font-size: 18px;
+        font-weight: 700;
+        background-color: $color-light-gray;
+        border-radius: 6px;
+        background-color: $color-white;
+        border: none;
+    }
+    &__list {
+    }
+    .filter__change {
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        background: url("../src/icons/sortuvannia.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
     }
 }
 @import "header";
