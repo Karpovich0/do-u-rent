@@ -22,11 +22,20 @@
 				</g>
 			</symbol>
 		</svg>
-		<header class="header">
+		<header class="header header--open">
 			<div class="container">
-				<a href="index.html" class="logo"><img src="./src/icons/dourent.svg" width="140" alt="" /></a>
+				<a href="index.html" class="logo">
+					<picture>
+						<source media="(max-width:575px)" srcset="/src/icons/logo.svg" sizes="40px" />
+						<img src="./src/icons/dourent.svg" width="140" alt="" />
+					</picture>
+				</a>
 				<div class="drop-menu drop-menu--region">
-					<button class="toggle1" type="button">Київ</button>
+					<button class="toggle1" type="button">
+						<img class="location" src="./src/icons/location.svg" alt="" width="30" height="30" /><span
+							>Київ</span
+						>
+					</button>
 					<div class="drop-menu__container">
 						<div class="drop-menu__header">
 							<label for="region-name"
@@ -42,7 +51,9 @@
 								/>
 							</p>
 						</div>
-						<p class="drop-menu__country"><a href="">Вся Україна</a></p>
+						<p class="drop-menu__country">
+							<a href="">Вся Україна</a>
+						</p>
 						<ul>
 							<li><a href="">АР Крим</a></li>
 							<li><a href="">Волинська обл.</a></li>
@@ -73,30 +84,65 @@
 					</div>
 				</div>
 				<div class="drop-menu drop-menu--tools">
-					<button class="toggle2" type="button">Електроінструмент</button>
-					<div class="drop-menu__container">
-						<p class="drop-menu__header drop-menu__country"><a href="">Дивитися всі оголошення</a></p>
+					<button class="toggle2" type="button">
+						<img class="location" src="./src/icons/category.svg" alt="" width="30" height="30" />
+						<span>Електроінструмент</span>
+					</button>
+					<div class="drop-menu__container drop-menu__container--tools">
+						<p class="drop-menu__header">
+							<a href="">Дивитися всі оголошення</a>
+						</p>
 						<ul class="drop-menu__list drop-menu__list--tools">
 							<li>
-								<a href=""><img width="45" src="./src/icons/nedvijimost.svg" alt="" />Нерухомість</a>
+								<a href=""
+									><span class="drop-menu__wrapper"
+										><img width="45" src="./src/icons/nedvijimost.svg" alt=""
+									/></span>
+									Нерухомість</a
+								>
 							</li>
 							<li>
-								<a href=""><img width="45" src="./src/icons/uslugi.svg" alt="" />Обладнання</a>
+								<a href=""
+									><span class="drop-menu__wrapper"
+										><img width="45" src="./src/icons/uslugi.svg" alt="" /></span
+									>Обладнання</a
+								>
 							</li>
 							<li>
-								<a href=""><img width="45" src="./src/icons/moda.svg" alt="" />Одяг</a>
+								<a href=""
+									><span class="drop-menu__wrapper"
+										><img width="45" src="./src/icons/moda.svg" alt="" /></span
+									>Одяг</a
+								>
 							</li>
 							<li>
-								<a href=""><img width="45" src="./src/icons/nedvijimost.svg" alt="" />Інше</a>
+								<a href=""
+									><span class="drop-menu__wrapper"
+										><img width="45" src="./src/icons/nedvijimost.svg" alt="" /></span
+									>Інше</a
+								>
 							</li>
 							<li>
-								<a href=""><img width="45" src="./src/icons/avto.svg" alt="" />Транспорт</a>
+								<a href=""
+									><span class="drop-menu__wrapper"
+										><img width="45" src="./src/icons/avto.svg" alt="" /></span
+									>Транспорт</a
+								>
 							</li>
 							<li>
-								<a href=""><img width="45" src="./src/icons/sport.svg" alt="" />Спорт і відпочинок</a>
+								<a href=""
+									><span class="drop-menu__wrapper"
+										><img width="45" src="./src/icons/sport.svg" alt=""
+									/></span>
+									Спорт і відпочинок</a
+								>
 							</li>
 							<li>
-								<a href=""><img width="45" src="./src/icons/deti.svg" alt="" />Дитячий світ</a>
+								<a href=""
+									><span class="drop-menu__wrapper"
+										><img width="45" src="./src/icons/deti.svg" alt="" /></span
+									>Дитячий світ</a
+								>
 							</li>
 						</ul>
 						<p class="drop-menu__add">
@@ -106,16 +152,21 @@
 						</p>
 					</div>
 				</div>
-				<form action="">
-					<input class="header__input" type="text" placeholder="Що шукаєте?" />
-					<button type="submit" class="button">
-						Знайти <img src="/src/icons/poshuk-bily.svg" width="25" height="25" alt="" />
+				<form action="" class="header__form header__form--opened">
+					<input class="header__input header__input--search" type="text" placeholder="Що шукаєте?" />
+					<button type="button" class="header__search-button button">
+						<span>Знайти</span>
+						<img src="/src/icons/poshuk-bily.svg" width="25" height="25" alt="" />
 					</button>
 				</form>
 				<nav>
-					<a href="" class="bookmarks"><img src="./src/icons/zirka.svg" alt="" width="30" /></a>
-					<a href="" class="bookmarks"><img src="./src/icons/profil.svg" alt="" width="25" /></a>
-					<a href="./add.html" class="add button"><span>+</span> Додати</a>
+					<a href="./bookmarks.html" class="bookmarks"
+						><img src="./src/icons/zirka.svg" alt="" width="30"
+					/></a>
+					<a href="./profile.html" class="bookmarks"
+						><img src="./src/icons/profil.svg" alt="" width="25"
+					/></a>
+					<a href="./add.html" class="add button">+ <span>Додати</span></a>
 				</nav>
 			</div>
 		</header>
@@ -140,6 +191,11 @@
 						<li><a href="" class="button">+ Запропонувати категорію</a></li>
 					</ul>
 				</nav>
+				<div class="filter filter--rent">
+					<div class="container">
+						<button class="filter__list">Фільтри</button> <button class="filter__change"></button>
+					</div>
+				</div>
 				<ul class="main__list">
 					<li class="main__item item">
 						<article>
@@ -218,7 +274,9 @@
 									ключовими словами. Але так, щоб читалося дійсно з інтересом.
 								</p>
 								<div class="item__footer item__footer--bookmarks">
-									<a class="item__statistic item__statistic--disabled">Тимчасово недоступно</a>
+									<a class="item__statistic item__statistic--disabled" disabled
+										>Тимчасово недоступно</a
+									>
 									<div class="item__more">
 										<a href="">
 											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">

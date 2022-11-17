@@ -309,6 +309,11 @@
         font-weight: 900;
         border: none;
         color: $color-white;
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-orange-hover;
+        }
         @media (max-width: $width-tablet-large) {
             margin-bottom: 25px;
             padding: 14px 40px;

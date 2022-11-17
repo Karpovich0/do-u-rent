@@ -13,6 +13,15 @@
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body class="body">
+		<svg style="display: none">
+			<symbol id="star">
+				<g>
+					<path
+						d="M205.56 145.67l-37.7 -119.7 28.61 -9.01 37.7 119.71 -14.28 19.5 -14.33 -10.5zm28.61 -9c2.48,7.89 -1.9,16.32 -9.8,18.8 -7.9,2.49 -16.32,-1.9 -18.81,-9.8l28.61 -9zm108.43 19.26l-122.71 0.24 -0.06 -30 122.72 -0.24 8.96 27.04 -8.91 2.96zm-0.05 -30c8.28,-0.01 15,6.69 15.02,14.97 0.02,8.28 -6.68,15.01 -14.97,15.03l-0.05 -30zm-108.32 76.68l99.41 -73.72 17.87 24.08 -99.42 73.73 -23.21 -7.49 5.35 -16.6zm17.86 24.09c-6.65,4.93 -16.04,3.54 -20.97,-3.11 -4.94,-6.65 -3.54,-16.05 3.11,-20.98l17.86 24.09zm14.92 112.06l-38.13 -119.55 28.57 -9.11 38.14 119.55 -23.27 16.57 -5.31 -7.46zm28.58 -9.11c2.51,7.89 -1.84,16.33 -9.73,18.84 -7.89,2.52 -16.33,-1.84 -18.85,-9.73l28.58 -9.11zm-104.44 -81.58l99.13 74.13 -17.96 24.02 -99.13 -74.13 0 -24.02 17.96 0zm-17.96 24.02c-6.64,-4.96 -7.99,-14.36 -3.03,-20.99 4.95,-6.63 14.35,-7.99 20.99,-3.03l-17.96 24.02zm-99.14 50.11l99.14 -74.13 17.96 24.02 -99.14 74.13 -23.27 -16.57 5.31 -7.45zm17.96 24.02c-6.63,4.95 -16.03,3.6 -20.99,-3.03 -4.96,-6.64 -3.6,-16.03 3.03,-20.99l17.96 24.02zm43.44 -127.01l-38.13 119.55 -28.58 -9.11 38.14 -119.55 23.22 -7.49 5.35 16.6zm-28.57 -9.11c2.52,-7.89 10.96,-12.25 18.85,-9.73 7.88,2.52 12.24,10.95 9.72,18.84l-28.57 -9.11zm-76.19 -81.21l99.41 73.72 -17.86 24.09 -99.42 -73.73 8.96 -27.04 8.91 2.96zm-17.87 24.08c-6.65,-4.93 -8.04,-14.32 -3.11,-20.97 4.93,-6.65 14.33,-8.05 20.98,-3.11l-17.87 24.08zm131.62 3.2l-122.71 -0.24 0.05 -30 122.71 0.24 14.28 19.5 -14.33 10.5zm0.05 -30c8.29,0.02 14.99,6.75 14.97,15.03 -0.02,8.28 -6.74,14.98 -15.02,14.97l0.05 -30zm51.98 -100.2l-37.7 119.7 -28.61 -9 37.7 -119.71 28.61 0 0 9.01zm-28.61 -9.01c2.49,-7.9 10.91,-12.28 18.81,-9.79 7.9,2.48 12.28,10.9 9.8,18.8l-28.61 -9.01z"
+					/>
+				</g>
+			</symbol>
+		</svg>
 		<header class="header header--open">
 			<div class="container">
 				<a href="index.html" class="logo">
@@ -76,6 +85,7 @@
 				</div>
 				<div class="drop-menu drop-menu--tools">
 					<button class="toggle2" type="button">
+						<img class="location" src="./src/icons/category.svg" alt="" width="30" height="30" />
 						<span>Електроінструмент</span>
 					</button>
 					<div class="drop-menu__container drop-menu__container--tools">
@@ -142,9 +152,9 @@
 						</p>
 					</div>
 				</div>
-				<form action="">
+				<form action="" class="header__form header__form--opened">
 					<input class="header__input header__input--search" type="text" placeholder="Що шукаєте?" />
-					<button type="submit" class="header__search-button button">
+					<button type="button" class="header__search-button button">
 						<span>Знайти</span>
 						<img src="/src/icons/poshuk-bily.svg" width="25" height="25" alt="" />
 					</button>
@@ -166,38 +176,379 @@
 					<button class="filter__list">Фільтри</button> <button class="filter__change"></button>
 				</div>
 			</div>
-			<section class="main-page container">
-				<h1>Оренда всього<br /><span>без посередників</span></h1>
-				<div class="go-to-telegram">
-					<p>Продовжуйте Онлайн, або перейдіть у</p>
-					<a href="">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
-							<path
-								d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"
-							/></svg
-						>Телеграм бот</a
-					>
+			<section class="main-page">
+				<div class="container">
+					<h1 class="main-page__title">Оренда всього<br /><span>без посередників</span></h1>
+					<div class="go-to-telegram">
+						<p>Продовжуйте Онлайн, або перейдіть у</p>
+						<a href="">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+								<path
+									d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"
+								/></svg
+							>Телеграм бот</a
+						>
+					</div>
+					<div class="actions">
+						<a href="">Здати в оренду</a>
+						<a href=""> Орендувати</a>
+					</div>
 				</div>
-				<div class="actions">
-					<a href="">Здати в оренду</a>
-					<a href=""> Орендувати</a>
-				</div>
-				<div class="text">
-					<p>
-						DoURent - це новий міжнародний стартап з Українським корінням. Сервіс дозволяє взяти або здати в
-						оренду без посередників будь-що - інструменти, одяг, автомобіль, квартиру, іграшки та багато
-						іншого.
-					</p>
-					<p>Особливість сервісу - відсутність комісій для власників та безкоштовність для тих, хто шукає!</p>
-					<p>
-						На платформі DoURent можна створити власний бізнес без вкладень, або підвищити дохідність
-						існуючого! Аудиторія сервісу - мільйони користувачів, яким щось потрібно прямо зараз!
-					</p>
-					<p>
-						Все, що потрібно, зазвичай, є в радіусі кілометру. Користь сервісу для шукачів в значній
-						економії вартості оренди чи прокату та часу і витрат на доставку. Для власників - це додатковий
-						дохід, або повноцінний бізнес!
-					</p>
+				<section class="index-propositions">
+					<div class="container">
+						<h2 class="index-propositions__title">Останні пропозиції</h2>
+						<div class="items">
+							<ul class="main__list">
+								<li class="main__item item">
+									<article>
+										<a href="" class="item__img">
+											<img src="./src/item.jpg" width="141" height="141" alt=""
+										/></a>
+										<div class="item__body">
+											<div class="item__header">
+												<div class="item__data">
+													<span>Валера</span>
+													<address>Київ, Петропавлівська</address>
+													<p><time>08:00</time>-<time>20:00</time></p>
+												</div>
+												<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+												<p class="item__price">
+													50 грн/<span
+														>доба<svg
+															xmlns="http://www.w3.org/2000/svg"
+															viewBox="0 0 16 16"
+														>
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/></svg
+													></span>
+												</p>
+											</div>
+											<p class="item__description">
+												Опис пропозиції та стислий асортимент продукції або послуг. Щось
+												читабельне, з ключовими словами. Але так, щоб читалося дійсно з
+												інтересом.
+											</p>
+											<div class="item__footer item__footer--bookmarks">
+												<a href="" class="item__statistic">Орендувати (показати контакти)</a>
+												<div class="item__more">
+													<a href="">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/>
+														</svg>
+														Детальніше</a
+													>
+												</div>
+												<div class="item__deactivate">
+													<button><span>!</span> Деактивувати</button>
+												</div>
+												<button class="star">
+													<svg width="30" height="30" viewBox="0 0 366 354.19">
+														<use xlink:href="#star"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="main__item item">
+									<article>
+										<a href="" class="item__img">
+											<img src="./src/item.jpg" width="141" height="141" alt=""
+										/></a>
+										<div class="item__body">
+											<div class="item__header">
+												<div class="item__data">
+													<span>Валера</span>
+													<address>Київ, Петропавлівська</address>
+													<p><time>08:00</time>-<time>20:00</time></p>
+												</div>
+												<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+												<p class="item__price">
+													50 грн/<span
+														>доба<svg
+															xmlns="http://www.w3.org/2000/svg"
+															viewBox="0 0 16 16"
+														>
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/></svg
+													></span>
+												</p>
+											</div>
+											<p class="item__description">
+												Опис пропозиції та стислий асортимент продукції або послуг. Щось
+												читабельне, з ключовими словами. Але так, щоб читалося дійсно з
+												інтересом.
+											</p>
+											<div class="item__footer item__footer--bookmarks">
+												<a href="" class="item__statistic">Орендувати (показати контакти)</a>
+												<div class="item__more">
+													<a href="">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/>
+														</svg>
+														Детальніше</a
+													>
+												</div>
+												<div class="item__deactivate">
+													<button><span>!</span> Деактивувати</button>
+												</div>
+												<button class="star">
+													<svg width="30" height="30" viewBox="0 0 366 354.19">
+														<use xlink:href="#star"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="main__item item">
+									<article>
+										<a href="" class="item__img">
+											<img src="./src/item.jpg" width="141" height="141" alt=""
+										/></a>
+										<div class="item__body">
+											<div class="item__header">
+												<div class="item__data">
+													<span>Валера</span>
+													<address>Київ, Петропавлівська</address>
+													<p><time>08:00</time>-<time>20:00</time></p>
+												</div>
+												<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+												<p class="item__price">
+													50 грн/<span
+														>доба<svg
+															xmlns="http://www.w3.org/2000/svg"
+															viewBox="0 0 16 16"
+														>
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/></svg
+													></span>
+												</p>
+											</div>
+											<p class="item__description">
+												Опис пропозиції та стислий асортимент продукції або послуг. Щось
+												читабельне, з ключовими словами. Але так, щоб читалося дійсно з
+												інтересом.
+											</p>
+											<div class="item__footer item__footer--bookmarks">
+												<a href="" class="item__statistic">Орендувати (показати контакти)</a>
+												<div class="item__more">
+													<a href="">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/>
+														</svg>
+														Детальніше</a
+													>
+												</div>
+												<div class="item__deactivate">
+													<button><span>!</span> Деактивувати</button>
+												</div>
+												<button class="star">
+													<svg width="30" height="30" viewBox="0 0 366 354.19">
+														<use xlink:href="#star"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="main__item item">
+									<article>
+										<a href="" class="item__img">
+											<img src="./src/item.jpg" width="141" height="141" alt=""
+										/></a>
+										<div class="item__body">
+											<div class="item__header">
+												<div class="item__data">
+													<span>Валера</span>
+													<address>Київ, Петропавлівська</address>
+													<p><time>08:00</time>-<time>20:00</time></p>
+												</div>
+												<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+												<p class="item__price">
+													50 грн/<span
+														>доба<svg
+															xmlns="http://www.w3.org/2000/svg"
+															viewBox="0 0 16 16"
+														>
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/></svg
+													></span>
+												</p>
+											</div>
+											<p class="item__description">
+												Опис пропозиції та стислий асортимент продукції або послуг. Щось
+												читабельне, з ключовими словами. Але так, щоб читалося дійсно з
+												інтересом.
+											</p>
+											<div class="item__footer item__footer--bookmarks">
+												<a href="" class="item__statistic">Орендувати (показати контакти)</a>
+												<div class="item__more">
+													<a href="">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/>
+														</svg>
+														Детальніше</a
+													>
+												</div>
+												<div class="item__deactivate">
+													<button><span>!</span> Деактивувати</button>
+												</div>
+												<button class="star">
+													<svg width="30" height="30" viewBox="0 0 366 354.19">
+														<use xlink:href="#star"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="main__item item">
+									<article>
+										<a href="" class="item__img">
+											<img src="./src/item.jpg" width="141" height="141" alt=""
+										/></a>
+										<div class="item__body">
+											<div class="item__header">
+												<div class="item__data">
+													<span>Валера</span>
+													<address>Київ, Петропавлівська</address>
+													<p><time>08:00</time>-<time>20:00</time></p>
+												</div>
+												<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+												<p class="item__price">
+													50 грн/<span
+														>доба<svg
+															xmlns="http://www.w3.org/2000/svg"
+															viewBox="0 0 16 16"
+														>
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/></svg
+													></span>
+												</p>
+											</div>
+											<p class="item__description">
+												Опис пропозиції та стислий асортимент продукції або послуг. Щось
+												читабельне, з ключовими словами. Але так, щоб читалося дійсно з
+												інтересом.
+											</p>
+											<div class="item__footer item__footer--bookmarks">
+												<a href="" class="item__statistic">Орендувати (показати контакти)</a>
+												<div class="item__more">
+													<a href="">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/>
+														</svg>
+														Детальніше</a
+													>
+												</div>
+												<div class="item__deactivate">
+													<button><span>!</span> Деактивувати</button>
+												</div>
+												<button class="star">
+													<svg width="30" height="30" viewBox="0 0 366 354.19">
+														<use xlink:href="#star"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="main__item item">
+									<article>
+										<a href="" class="item__img">
+											<img src="./src/item.jpg" width="141" height="141" alt=""
+										/></a>
+										<div class="item__body">
+											<div class="item__header">
+												<div class="item__data">
+													<span>Валера</span>
+													<address>Київ, Петропавлівська</address>
+													<p><time>08:00</time>-<time>20:00</time></p>
+												</div>
+												<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+												<p class="item__price">
+													50 грн/<span
+														>доба<svg
+															xmlns="http://www.w3.org/2000/svg"
+															viewBox="0 0 16 16"
+														>
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/></svg
+													></span>
+												</p>
+											</div>
+											<p class="item__description">
+												Опис пропозиції та стислий асортимент продукції або послуг. Щось
+												читабельне, з ключовими словами. Але так, щоб читалося дійсно з
+												інтересом.
+											</p>
+											<div class="item__footer item__footer--bookmarks">
+												<a href="" class="item__statistic">Орендувати (показати контакти)</a>
+												<div class="item__more">
+													<a href="">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+															<polygon
+																points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
+															/>
+														</svg>
+														Детальніше</a
+													>
+												</div>
+												<div class="item__deactivate">
+													<button><span>!</span> Деактивувати</button>
+												</div>
+												<button class="star">
+													<svg width="30" height="30" viewBox="0 0 366 354.19">
+														<use xlink:href="#star"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</article>
+								</li>
+							</ul>
+						</div>
+						<p class="index-propositions__all"><a href="">Дивитись всі пропозиції</a></p>
+					</div>
+				</section>
+				<div class="container">
+					<div class="text">
+						<p>
+							DoURent - це новий міжнародний стартап з Українським корінням. Сервіс дозволяє взяти або
+							здати в оренду без посередників будь-що - інструменти, одяг, автомобіль, квартиру, іграшки
+							та багато іншого.
+						</p>
+						<p>
+							Особливість сервісу - відсутність комісій для власників та безкоштовність для тих, хто
+							шукає!
+						</p>
+						<p>
+							На платформі DoURent можна створити власний бізнес без вкладень, або підвищити дохідність
+							існуючого! Аудиторія сервісу - мільйони користувачів, яким щось потрібно прямо зараз!
+						</p>
+						<p>
+							Все, що потрібно, зазвичай, є в радіусі кілометру. Користь сервісу для шукачів в значній
+							економії вартості оренди чи прокату та часу і витрат на доставку. Для власників - це
+							додатковий дохід, або повноцінний бізнес!
+						</p>
+					</div>
 				</div>
 			</section>
 		</main>

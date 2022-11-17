@@ -25,6 +25,10 @@
         font-size: 22px;
         line-height: 32px;
         color: $color-blue;
+        transition: color 0.2s ease;
+        &:hover {
+            color: $color-blue-hover;
+        }
         @media (max-width: $width-tablet-large) {
             font-size: 20px;
         }
@@ -66,6 +70,16 @@
             align-items: center;
             cursor: pointer;
             position: relative;
+            transition: color 0.2s ease;
+            &:hover {
+                color: $color-blue-hover;
+                svg {
+                    fill: $color-blue-hover;
+                }
+                &::after {
+                    background-color: $color-blue-hover;
+                }
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -74,6 +88,7 @@
                 width: calc(100% - 25px);
                 height: 2px;
                 background-color: $color-blue;
+                transition: background-color 0.2s ease;
             }
         }
         svg {
@@ -82,6 +97,7 @@
             height: 20px;
             fill: $color-blue;
             transform: rotate(90deg);
+            transition: fill 0.2s ease;
         }
     }
     &__description {
@@ -139,6 +155,7 @@
         display: flex;
         justify-content: flex-start;
         margin-right: 40px;
+
         @media (max-width: $width-tablet-large) {
             order: 1;
             margin-right: 0;
@@ -151,6 +168,17 @@
             color: $color-blue;
             border: 2px solid $color-blue;
             border-radius: 4px;
+            transition: color 0.2s ease, border 0.2s ease;
+            svg {
+                transition: fill 0.2s ease;
+            }
+            &:hover {
+                border-color: $color-blue-hover;
+                color: $color-blue-hover;
+                svg {
+                    fill: $color-blue-hover;
+                }
+            }
             @media (max-width: $width-tablet-large) {
                 padding: 2px 5px 2px 3px;
                 font-size: 15px;
@@ -171,6 +199,11 @@
         background-color: $color-orange;
         color: $color-white;
         border-radius: 4px;
+        transition: background-color 0.2s ease;
+        &:hover:not([disabled]) {
+            background-color: $color-orange-hover;
+        }
+
         @media (max-width: $width-tablet-large) {
             font-size: 14px;
         }
@@ -201,6 +234,7 @@
     &__deactivate {
         display: flex;
         justify-content: end;
+
         @media (max-width: $width-tablet-large) {
             font-size: 15px;
         }
@@ -213,6 +247,11 @@
             background-color: transparent;
             border: none;
             color: $color-orange;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            &:hover {
+                color: $color-orange-hover;
+            }
             @media (max-width: $width-mobile) {
                 margin-right: 0;
             }
@@ -238,6 +277,7 @@
         background-color: transparent;
         border: 0;
         fill: $color-blue;
+        cursor: pointer;
         @media (max-width: $width-mobile) {
             justify-self: start;
             order: 2;
