@@ -68,5 +68,13 @@
         justify-content: center;
         color: $color-gray;
         background-color: $color-black;
+        &:hover {
+            span {
+                text-decoration: none;
+            }
+        }
+        span {
+            text-decoration: underline;
+        }
     }
 }

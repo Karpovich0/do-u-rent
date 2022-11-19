@@ -1,15 +1,15 @@
 $color-black: #000000;
 $color-white: #ffffff;
 $color-blue: #336699;
-$color-blue-hover: #4d9be9;
 $color-light-gray: #e6e6e6;
 $color-gray: #999999;
 $color-orange: #ff6600;
-$color-orange-hover: #c25309;
 $color-light-green: #33cc33;
 $width-tablet-large: 1199px;
+$width-tablet-middle: 999px;
 $width-tablet: 767px;
 $width-mobile: 575px;
+$width-mobile-small: 399px;
 html {
     height: 100%;
 }
@@ -114,8 +114,8 @@ body {
             transition: color 0.2s ease, border 0.2s ease,
                 background-color 0.2s ease;
             &:hover {
-                border-color: $color-blue-hover;
-                color: $color-blue-hover;
+                color: $color-white;
+                background-color: $color-blue;
             }
             @media (max-width: $width-tablet-large) {
                 padding: 5px 10px;
@@ -131,9 +131,6 @@ body {
         a.current {
             background-color: $color-blue;
             color: $color-white;
-            &:hover {
-                background-color: $color-blue-hover;
-            }
         }
     }
     &__list {
@@ -245,10 +242,10 @@ body {
         background-color: $color-white;
         border: 2px solid $color-blue;
         color: $color-blue;
-        transition: color 0.2s ease, border 0.2s ease;
+        transition: color 0.2s ease, border 0.2s ease, background-color 0.2 ease;
         &:hover {
-            color: $color-orange;
-            border-color: $color-orange;
+            color: $color-white;
+            background-color: $color-blue;
         }
     }
     .current {
@@ -257,8 +254,8 @@ body {
         color: $color-white;
         &:hover {
             color: $color-white;
-            background-color: $color-blue-hover;
-            border-color: $color-blue-hover;
+            background-color: $color-blue;
+            border-color: $color-blue;
         }
     }
 }
@@ -319,14 +316,9 @@ body {
         position: relative;
         color: $color-blue;
         font-weight: 500;
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 2px;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: $color-blue;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
         }
     }
     .button--liqpay {
@@ -335,6 +327,13 @@ body {
         background-color: $color-light-green;
         color: $color-white;
         border-radius: 12px;
+        border-color: $color-light-green;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        text-decoration: none;
+        &:hover {
+            background-color: $color-white;
+            color: $color-light-green;
+        }
         &::after {
             content: none;
         }
@@ -410,24 +409,29 @@ body {
             @media (max-width: $width-tablet) {
                 font-size: 18px;
             }
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }
 .index-category {
+    padding: 20px 0;
     background-color: $color-light-gray;
-    ul {
-        padding: 20px 0;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
+    @media (max-width: $width-tablet-large) {
+        padding: 10px 0 0;
     }
-    a {
-        display: flex;
-        gap: 10px;
-        align-items: center;
+    @media (max-width: $width-tablet) {
+        &.drop-menu {
+            margin-bottom: 0;
+        }
+        margin-top: 30px;
+    }
+    .container > ul > li > a::before {
+        content: none;
     }
 }
+
 @import "header";
 @import "footer";
 @import "item";
