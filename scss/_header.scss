@@ -54,6 +54,13 @@
                 display: block;
             }
         }
+        a {
+            transition: color 0.2s ease, text-decoration 0.2s ease;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: $color-blue;
+        }
 
         &--open {
             .drop-menu__container {
@@ -80,9 +87,18 @@
             padding: 0;
             display: flex;
             align-items: center;
+            column-gap: 5px;
             background-color: transparent;
             border: none;
             cursor: pointer;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            &:hover {
+                color: $color-blue;
+                svg {
+                    fill: $color-blue;
+                }
+            }
             &::before {
                 margin-right: 5px;
                 content: "";
@@ -94,28 +110,22 @@
                     content: none;
                 }
             }
-            &::after {
-                display: block;
-                margin-left: 5px;
-                content: "";
-                width: 14px;
-                height: 14px;
-                background: url("../src/icons/arrow.svg");
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: 0 0;
+            svg {
+                fill: $color-black;
                 transform: rotate(90deg);
                 transition: transform 0.2s ease;
                 @media (max-width: $width-tablet-large) {
-                    content: none;
+                    display: none;
                 }
             }
         }
         &--open {
             & > button {
                 position: relative;
-                &::after {
+                color: $color-blue;
+                svg {
                     transform: rotate(-90deg);
+                    fill: $color-blue;
                 }
                 @media (max-width: $width-tablet-large) {
                     &::before {
@@ -267,11 +277,7 @@
         display: grid;
         grid-template-columns: 1fr auto;
         flex-grow: 1;
-        &:hover {
-            input {
-                border-color: $color-blue-hover;
-            }
-        }
+
         .button {
             display: flex;
             align-items: center;
@@ -294,9 +300,6 @@
                 display: none;
             }
         }
-        input:hover + button {
-            background-color: $color-blue-hover;
-        }
     }
     @media (max-width: $width-mobile) {
         &__form--open {
@@ -312,6 +315,27 @@
         }
     }
     &__search-button {
+        border-left: 0;
+        padding: 0 7px 0 10px;
+        span {
+            margin-right: 5px;
+        }
+        path {
+            fill: $color-white;
+            transition: fill 0.2s ease;
+        }
+        circle {
+            stroke: $color-white;
+            transition: stroke 0.2s ease;
+        }
+        &:hover {
+            path {
+                fill: $color-blue;
+            }
+            circle {
+                stroke: $color-blue;
+            }
+        }
         @media (max-width: $width-tablet-large) {
             min-width: unset;
             span {
@@ -325,14 +349,42 @@
     nav {
         display: flex;
         column-gap: 15px;
+        polygon,
+        #head-stroke,
+        #body-stroke {
+            fill: transparent;
+            transition: fill 0.2s ease;
+        }
+        path {
+            fill: #336699;
+        }
         & > * {
             flex-shrink: 0;
+        }
+        .bookmarks:hover {
+            polygon,
+            #head-stroke,
+            #body-stroke {
+                fill: #336699;
+            }
         }
         @media (max-width: $width-tablet) {
             justify-self: end;
             column-gap: 10px;
         }
         .add {
+            padding: 0 7px;
+            line-height: 25px;
+            border: 3px solid $color-orange;
+            align-items: center;
+            background-color: $color-orange;
+            &:hover {
+                color: $color-orange;
+                background-color: transparent;
+                svg path {
+                    fill: $color-orange;
+                }
+            }
             @media (max-width: $width-tablet) {
                 font-size: 20px;
                 min-width: unset;
@@ -342,6 +394,14 @@
                 margin-left: 5px;
                 @media (max-width: $width-tablet) {
                     display: none;
+                }
+            }
+            svg {
+                width: 18px;
+                height: 18px;
+                path {
+                    transform: fill 0.2 ease;
+                    fill: $color-white;
                 }
             }
         }
