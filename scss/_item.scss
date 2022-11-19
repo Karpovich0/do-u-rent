@@ -215,7 +215,19 @@
             background-color: $color-white;
             color: $color-orange;
         }
-
+        &:hover {
+            &.item__statistic--numbers {
+                color: $color-white;
+                background-color: $color-orange;
+            }
+        }
+        &.item__statistic--numbers {
+            @media (max-width: $width-tablet) {
+                justify-self: start;
+                flex-direction: row;
+                grid-column: 1/-1;
+            }
+        }
         @media (max-width: $width-tablet-large) {
             font-size: 14px;
         }
@@ -241,13 +253,6 @@
             }
             &:last-child:after {
                 content: none;
-            }
-        }
-        &--numbers {
-            @media (max-width: $width-tablet) {
-                justify-self: start;
-                flex-direction: row;
-                grid-column: 1/-1;
             }
         }
     }
