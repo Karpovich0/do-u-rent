@@ -11,15 +11,16 @@ $width-tablet: 767px;
 $width-mobile: 575px;
 $width-mobile-small: 399px;
 html {
-    height: 100%;
+    height: fill-available;
 }
 body {
     display: grid;
     grid-template-rows: 1fr max-content;
-    min-height: 100vh;
+    height: 100vh;
     font-family: "Museo Sans Cyrl", sans-serif;
     font-style: normal;
     font-weight: 500;
+    height: fill-available;
     input,
     textarea,
     button,
@@ -29,7 +30,9 @@ body {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 }
-
+.body--lock {
+    overflow: hidden;
+}
 .container {
     max-width: 1045px;
     padding: 0 40px;

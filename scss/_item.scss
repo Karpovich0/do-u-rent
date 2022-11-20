@@ -26,9 +26,7 @@
         line-height: 32px;
         color: $color-blue;
         transition: text-decoration 0.2s ease;
-        &:hover {
-            text-decoration: underline;
-        }
+
         @media (max-width: $width-tablet-large) {
             font-size: 20px;
         }
@@ -96,8 +94,8 @@
             width: 20px;
             height: 20px;
             fill: $color-blue;
-            transform: rotate(90deg);
             transition: fill 0.2s ease;
+            transform: rotate(90deg);
         }
     }
     &__description {
@@ -155,6 +153,12 @@
         display: flex;
         justify-content: flex-start;
         margin-right: 40px;
+        .more-open {
+            display: none;
+        }
+        .more-close {
+            display: block;
+        }
 
         @media (max-width: $width-tablet-large) {
             order: 1;
@@ -163,19 +167,22 @@
         @media (max-width: $width-tablet) {
             width: 100%;
         }
-        a {
+        button {
             display: flex;
             align-items: center;
             padding: 5px 10px;
+            column-gap: 10px;
             font-size: 17px;
             color: $color-blue;
             border: 2px solid $color-blue;
             border-radius: 4px;
+            background-color: $color-white;
             transition: color 0.2s ease, border 0.2s ease,
                 background-color 0.2s ease;
             font-weight: 700;
+            cursor: pointer;
             svg {
-                transition: fill 0.2s ease;
+                transition: fill 0.2s ease, transform 0.2s ease;
             }
             &:hover {
                 border-color: $color-blue;
@@ -198,6 +205,7 @@
             height: 20px;
             fill: $color-blue;
             transform: rotate(90deg);
+            transition: fill 0.2s ease;
         }
     }
     &__statistic {
@@ -284,6 +292,37 @@
             span {
                 font-weight: 900;
             }
+        }
+    }
+    &__additional-info {
+        height: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        transform: scale(0);
+        transition: 0.2s ease opacity, 0.2s ease transform, height 0.2s ease;
+    }
+    .additional-open {
+        height: auto;
+        border-top: 1px solid $color-gray;
+        margin: 10px 10px 0;
+        padding: 10px 0;
+        transform: scale(1);
+        opacity: 1;
+    }
+    .button-open {
+        border-color: $color-blue;
+        color: $color-white;
+        background-color: $color-blue;
+        .more-open {
+            display: block;
+        }
+        .more-close {
+            display: none;
+        }
+        svg {
+            fill: $color-white;
+            transform: rotate(270deg);
         }
     }
 }

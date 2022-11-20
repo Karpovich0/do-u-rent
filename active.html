@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<header class="header header--open">
-			<div class="container">
+			<nav class="container">
 				<a href="index.html" class="logo">
 					<img src="./src/icons/dourent.svg" width="140" alt="" />
 				</a>
@@ -396,8 +396,8 @@
 						</svg>
 					</button>
 				</form>
-				<nav>
-					<a href="./bookmarks.html" class="bookmarks">
+				<nav class="navigation">
+					<a href="./bookmarks.html" class="bookmarks" rel="nofollow">
 						<svg width="30" height="30" viewBox="0 0 366 354.19">
 							<g>
 								<polygon
@@ -410,7 +410,7 @@
 								/>
 							</g></svg
 					></a>
-					<a href="./profile.html" class="bookmarks"
+					<a href="./profile.html" class="bookmarks" rel="nofollow"
 						><svg height="30" viewBox="0 0 283 353.75">
 							<g>
 								<g fill="#000">
@@ -439,7 +439,7 @@
 						><span>Додати</span></a
 					>
 				</nav>
-			</div>
+			</nav>
 		</header>
 		<main class="main">
 			<div class="container items">
@@ -463,9 +463,9 @@
 				<ul class="main__list">
 					<li class="main__item item">
 						<article>
-							<a href="" class="item__img">
-								<img src="./src/item.jpg" width="141" height="141" alt=""
-							/></a>
+							<div class="item__img">
+								<img src="./src/item.jpg" width="141" height="141" alt="" />
+							</div>
 							<div class="item__body">
 								<div class="item__header">
 									<div class="item__data">
@@ -473,7 +473,7 @@
 										<address>Київ, Петропавлівська</address>
 										<p><time>08:00</time>-<time>20:00</time></p>
 									</div>
-									<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+									<h1 class="item__title">Шурупокрут DeWalt 20v</h1>
 									<p class="item__price">
 										50 грн/<span
 											>доба<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -489,14 +489,15 @@
 								</p>
 								<div class="item__footer">
 									<div class="item__more">
-										<a href="">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+										<button type="button" class="item__more-button">
+											<span class="more-close">Детальніше</span>
+											<span class="more-open">Згорнути</span
+											><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 												<polygon
 													points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
 												/>
 											</svg>
-											Детальніше</a
-										>
+										</button>
 									</div>
 									<ul class="item__statistic item__statistic--numbers">
 										<li>Перегляди: 536</li>
@@ -506,14 +507,15 @@
 										<button><span>!</span> Деактивувати</button>
 									</div>
 								</div>
+								<div class="item__additional-info">додаткова інформація</div>
 							</div>
 						</article>
 					</li>
 					<li class="main__item item">
 						<article>
-							<a href="" class="item__img">
-								<img src="./src/item.jpg" width="141" height="141" alt=""
-							/></a>
+							<div class="item__img">
+								<img src="./src/item.jpg" width="141" height="141" alt="" />
+							</div>
 							<div class="item__body">
 								<div class="item__header">
 									<div class="item__data">
@@ -521,7 +523,7 @@
 										<address>Київ, Петропавлівська</address>
 										<p><time>08:00</time>-<time>20:00</time></p>
 									</div>
-									<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+									<h1 class="item__title">Шурупокрут DeWalt 20v</h1>
 									<p class="item__price">
 										50 грн/<span
 											>доба<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -537,14 +539,15 @@
 								</p>
 								<div class="item__footer">
 									<div class="item__more">
-										<a href="">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+										<button type="button" class="item__more-button">
+											<span class="more-close">Детальніше</span>
+											<span class="more-open">Згорнути</span
+											><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 												<polygon
 													points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
 												/>
 											</svg>
-											Детальніше</a
-										>
+										</button>
 									</div>
 									<ul class="item__statistic item__statistic--numbers">
 										<li>Перегляди: 536</li>
@@ -554,14 +557,15 @@
 										<button><span>!</span> Деактивувати</button>
 									</div>
 								</div>
+								<div class="item__additional-info">додаткова інформація</div>
 							</div>
 						</article>
 					</li>
 					<li class="main__item item">
 						<article>
-							<a href="" class="item__img">
-								<img src="./src/item.jpg" width="141" height="141" alt=""
-							/></a>
+							<div class="item__img">
+								<img src="./src/item.jpg" width="141" height="141" alt="" />
+							</div>
 							<div class="item__body">
 								<div class="item__header">
 									<div class="item__data">
@@ -569,7 +573,7 @@
 										<address>Київ, Петропавлівська</address>
 										<p><time>08:00</time>-<time>20:00</time></p>
 									</div>
-									<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+									<h1 class="item__title">Шурупокрут DeWalt 20v</h1>
 									<p class="item__price">
 										50 грн/<span
 											>доба<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -585,14 +589,15 @@
 								</p>
 								<div class="item__footer">
 									<div class="item__more">
-										<a href="">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+										<button type="button" class="item__more-button">
+											<span class="more-close">Детальніше</span>
+											<span class="more-open">Згорнути</span
+											><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 												<polygon
 													points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
 												/>
 											</svg>
-											Детальніше</a
-										>
+										</button>
 									</div>
 									<ul class="item__statistic item__statistic--numbers">
 										<li>Перегляди: 536</li>
@@ -602,14 +607,15 @@
 										<button><span>!</span> Деактивувати</button>
 									</div>
 								</div>
+								<div class="item__additional-info">додаткова інформація</div>
 							</div>
 						</article>
 					</li>
 					<li class="main__item item">
 						<article>
-							<a href="" class="item__img">
-								<img src="./src/item.jpg" width="141" height="141" alt=""
-							/></a>
+							<div class="item__img">
+								<img src="./src/item.jpg" width="141" height="141" alt="" />
+							</div>
 							<div class="item__body">
 								<div class="item__header">
 									<div class="item__data">
@@ -617,7 +623,7 @@
 										<address>Київ, Петропавлівська</address>
 										<p><time>08:00</time>-<time>20:00</time></p>
 									</div>
-									<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+									<h1 class="item__title">Шурупокрут DeWalt 20v</h1>
 									<p class="item__price">
 										50 грн/<span
 											>доба<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -633,14 +639,15 @@
 								</p>
 								<div class="item__footer">
 									<div class="item__more">
-										<a href="">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+										<button type="button" class="item__more-button">
+											<span class="more-close">Детальніше</span>
+											<span class="more-open">Згорнути</span
+											><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 												<polygon
 													points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
 												/>
 											</svg>
-											Детальніше</a
-										>
+										</button>
 									</div>
 									<ul class="item__statistic item__statistic--numbers">
 										<li>Перегляди: 536</li>
@@ -650,14 +657,15 @@
 										<button><span>!</span> Деактивувати</button>
 									</div>
 								</div>
+								<div class="item__additional-info">додаткова інформація</div>
 							</div>
 						</article>
 					</li>
 					<li class="main__item item">
 						<article>
-							<a href="" class="item__img">
-								<img src="./src/item.jpg" width="141" height="141" alt=""
-							/></a>
+							<div class="item__img">
+								<img src="./src/item.jpg" width="141" height="141" alt="" />
+							</div>
 							<div class="item__body">
 								<div class="item__header">
 									<div class="item__data">
@@ -665,7 +673,7 @@
 										<address>Київ, Петропавлівська</address>
 										<p><time>08:00</time>-<time>20:00</time></p>
 									</div>
-									<a href=""><h1 class="item__title">Шурупокрут DeWalt 20v</h1></a>
+									<h1 class="item__title">Шурупокрут DeWalt 20v</h1>
 									<p class="item__price">
 										50 грн/<span
 											>доба<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -681,14 +689,15 @@
 								</p>
 								<div class="item__footer">
 									<div class="item__more">
-										<a href="">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+										<button type="button" class="item__more-button">
+											<span class="more-close">Детальніше</span>
+											<span class="more-open">Згорнути</span
+											><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 												<polygon
 													points="4.38 12.19 8.57 8 4.38 3.81 5.91 2.29 11.62 8 5.91 13.71 4.38 12.19"
 												/>
 											</svg>
-											Детальніше</a
-										>
+										</button>
 									</div>
 									<ul class="item__statistic item__statistic--numbers">
 										<li>Перегляди: 536</li>
@@ -698,6 +707,7 @@
 										<button><span>!</span> Деактивувати</button>
 									</div>
 								</div>
+								<div class="item__additional-info">додаткова інформація</div>
 							</div>
 						</article>
 					</li>
@@ -759,5 +769,6 @@
 		</footer>
 		<script src="./js/jquery-3.6.1.min.js"></script>
 		<script src="./js/close-drop-menu.js"></script>
+		<script src="./js/show-additional-info.js"></script>
 	</body>
 </html>

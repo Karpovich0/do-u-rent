@@ -1,5 +1,7 @@
 html {
-  height: 100%;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
 }
 
 body {
@@ -8,10 +10,13 @@ body {
   -ms-grid-rows: 1fr max-content;
       grid-template-rows: 1fr -webkit-max-content;
       grid-template-rows: 1fr max-content;
-  min-height: 100vh;
+  height: 100vh;
   font-family: "Museo Sans Cyrl", sans-serif;
   font-style: normal;
   font-weight: 500;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
 }
 
 body input,
@@ -21,6 +26,10 @@ body select,
 body label,
 body a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.body--lock {
+  overflow: hidden;
 }
 
 .container {
@@ -845,7 +854,7 @@ body a {
   }
 }
 
-.header nav {
+.header .navigation {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -855,39 +864,39 @@ body a {
           column-gap: 15px;
 }
 
-.header nav polygon,
-.header nav #head-stroke,
-.header nav #body-stroke {
+.header .navigation polygon,
+.header .navigation #head-stroke,
+.header .navigation #body-stroke {
   fill: transparent;
   -webkit-transition: fill 0.2s ease;
   -o-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
 }
 
-.header nav path {
+.header .navigation path {
   fill: #336699;
 }
 
-.header nav > * {
+.header .navigation > * {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
 }
 
-.header nav .bookmarks:hover polygon,
-.header nav .bookmarks:hover #head-stroke,
-.header nav .bookmarks:hover #body-stroke {
+.header .navigation .bookmarks:hover polygon,
+.header .navigation .bookmarks:hover #head-stroke,
+.header .navigation .bookmarks:hover #body-stroke {
   fill: #336699;
 }
 
-.header nav .bookmarks.filled polygon,
-.header nav .bookmarks.filled #head-stroke,
-.header nav .bookmarks.filled #body-stroke {
+.header .navigation .bookmarks.filled polygon,
+.header .navigation .bookmarks.filled #head-stroke,
+.header .navigation .bookmarks.filled #body-stroke {
   fill: #336699;
 }
 
 @media (max-width: 767px) {
-  .header nav {
+  .header .navigation {
     -ms-grid-column-align: end;
         justify-self: end;
     -webkit-column-gap: 10px;
@@ -896,7 +905,7 @@ body a {
   }
 }
 
-.header nav .add {
+.header .navigation .add {
   padding: 0 7px;
   line-height: 25px;
   border: 3px solid #ff6600;
@@ -907,17 +916,17 @@ body a {
   background-color: #ff6600;
 }
 
-.header nav .add:hover {
+.header .navigation .add:hover {
   color: #ff6600;
   background-color: transparent;
 }
 
-.header nav .add:hover svg path {
+.header .navigation .add:hover svg path {
   fill: #ff6600;
 }
 
 @media (max-width: 1199px) {
-  .header nav .add {
+  .header .navigation .add {
     background-color: #ffffff;
     font-size: 20px;
     min-width: unset;
@@ -926,29 +935,29 @@ body a {
   }
 }
 
-.header nav .add span {
+.header .navigation .add span {
   margin-left: 5px;
 }
 
 @media (max-width: 1199px) {
-  .header nav .add span {
+  .header .navigation .add span {
     display: none;
   }
 }
 
-.header nav .add svg {
+.header .navigation .add svg {
   width: 18px;
   height: 18px;
 }
 
 @media (max-width: 1199px) {
-  .header nav .add svg {
+  .header .navigation .add svg {
     width: 28px;
     height: 28px;
   }
 }
 
-.header nav .add svg path {
+.header .navigation .add svg path {
   -webkit-transform: fill 0.2 ease;
       -ms-transform: fill 0.2 ease;
           transform: fill 0.2 ease;
@@ -956,7 +965,7 @@ body a {
 }
 
 @media (max-width: 1199px) {
-  .header nav .add svg path {
+  .header .navigation .add svg path {
     fill: #ff6600;
   }
 }
@@ -1225,20 +1234,24 @@ body a {
   overflow-y: auto;
   max-height: -webkit-calc(100vh - 43px);
   max-height: calc(100vh - 43px);
-  -webkit-box-shadow: 0px 10px 20px 0px white;
-          box-shadow: 0px 10px 20px 0px white;
-}
-
-@media (max-width: 1199px) {
-  .drop-menu__container {
-    -webkit-border-radius: 0;
-            border-radius: 0;
-  }
+  -webkit-box-shadow: 0px 10px 30px 10px white;
+          box-shadow: 0px 10px 30px 10px white;
 }
 
 @media (max-width: 767px) {
   .drop-menu__container {
-    top: 78px;
+    max-width: 95%;
+    top: 83px;
+    max-height: -webkit-calc(100vh - 82px);
+    max-height: calc(100vh - 82px);
+  }
+}
+
+@media (max-width: 575px) {
+  .drop-menu__container {
+    max-height: 75vh;
+    -webkit-box-shadow: 0px 61px 67px 44px rgba(0, 0, 0, 0.6);
+            box-shadow: 0px 61px 67px 44px rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -1768,10 +1781,6 @@ body a {
   transition: text-decoration 0.2s ease, -webkit-text-decoration 0.2s ease;
 }
 
-.item__title:hover {
-  text-decoration: underline;
-}
-
 @media (max-width: 1199px) {
   .item__title {
     font-size: 20px;
@@ -1895,12 +1904,12 @@ body a {
   width: 20px;
   height: 20px;
   fill: #336699;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
   -webkit-transition: fill 0.2s ease;
   -o-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .item__description {
@@ -2006,6 +2015,14 @@ body a {
   margin-right: 40px;
 }
 
+.item__more .more-open {
+  display: none;
+}
+
+.item__more .more-close {
+  display: block;
+}
+
 @media (max-width: 1199px) {
   .item__more {
     -webkit-box-ordinal-group: 2;
@@ -2022,7 +2039,7 @@ body a {
   }
 }
 
-.item__more a {
+.item__more button {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2032,41 +2049,48 @@ body a {
       -ms-flex-align: center;
           align-items: center;
   padding: 5px 10px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
   font-size: 17px;
   color: #336699;
   border: 2px solid #336699;
   -webkit-border-radius: 4px;
           border-radius: 4px;
+  background-color: #ffffff;
   -webkit-transition: color 0.2s ease, border 0.2s ease, background-color 0.2s ease;
   -o-transition: color 0.2s ease, border 0.2s ease, background-color 0.2s ease;
   transition: color 0.2s ease, border 0.2s ease, background-color 0.2s ease;
   font-weight: 700;
+  cursor: pointer;
 }
 
-.item__more a svg {
-  -webkit-transition: fill 0.2s ease;
-  -o-transition: fill 0.2s ease;
-  transition: fill 0.2s ease;
+.item__more button svg {
+  -webkit-transition: fill 0.2s ease, -webkit-transform 0.2s ease;
+  transition: fill 0.2s ease, -webkit-transform 0.2s ease;
+  -o-transition: fill 0.2s ease, transform 0.2s ease;
+  transition: fill 0.2s ease, transform 0.2s ease;
+  transition: fill 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
-.item__more a:hover {
+.item__more button:hover {
   border-color: #336699;
   color: #ffffff;
   background-color: #336699;
 }
 
-.item__more a:hover svg {
+.item__more button:hover svg {
   fill: #ffffff;
 }
 
 @media (max-width: 1199px) {
-  .item__more a {
+  .item__more button {
     font-size: 15px;
   }
 }
 
 @media (max-width: 767px) {
-  .item__more a {
+  .item__more button {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -2082,6 +2106,9 @@ body a {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
+  -webkit-transition: fill 0.2s ease;
+  -o-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
 }
 
 .item__statistic {
@@ -2233,6 +2260,51 @@ body a {
 
 .item__deactivate button span {
   font-weight: 900;
+}
+
+.item__additional-info {
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.2s ease opacity, 0.2s ease transform, height 0.2s ease;
+  -o-transition: 0.2s ease opacity, 0.2s ease transform, height 0.2s ease;
+  transition: 0.2s ease opacity, 0.2s ease transform, height 0.2s ease;
+}
+
+.item .additional-open {
+  height: auto;
+  border-top: 1px solid #999999;
+  margin: 10px 10px 0;
+  padding: 10px 0;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.item .button-open {
+  border-color: #336699;
+  color: #ffffff;
+  background-color: #336699;
+}
+
+.item .button-open .more-open {
+  display: block;
+}
+
+.item .button-open .more-close {
+  display: none;
+}
+
+.item .button-open svg {
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .item__footer--bookmarks {
