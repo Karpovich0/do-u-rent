@@ -1,4 +1,3 @@
-const $body = $(".body");
 const $menu1 = $(".drop-menu--region");
 const $menu2 = $(".drop-menu--tools");
 const $menu3 = $(".header__form");
@@ -10,12 +9,10 @@ const onMouseUp = (e) => {
 	) {
 		// ... or a descendant of the container.
 		$menu1.removeClass("drop-menu--open");
-		$body.removeClass("body--lock");
 	}
 };
 
 $(".toggle1").on("click", () => {
-	$body.toggleClass("body--lock");
 	$menu1
 		.toggleClass("drop-menu--open")
 		.promise()
@@ -35,12 +32,10 @@ const onMouseUp2 = (e) => {
 	) {
 		// ... or a descendant of the container.
 		$menu2.removeClass("drop-menu--open");
-		$body.removeClass("body--lock");
 	}
 };
 
 $(".toggle2").on("click", () => {
-	$body.toggleClass("body--lock");
 	$menu2
 		.toggleClass("drop-menu--open")
 		.promise()
@@ -60,12 +55,10 @@ const onMouseUp3 = (e) => {
 	) {
 		// ... or a descendant of the container.
 		$menu3.removeClass("header__form--open");
-		$body.removeClass("body--lock");
 	}
 };
 
 $(".header__search-button").on("click", () => {
-	$body.toggleClass("body--lock");
 	$menu3
 		.toggleClass("header__form--open")
 		.promise()
